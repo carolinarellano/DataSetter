@@ -41,7 +41,7 @@ public class Armor {
     }
 
 
-    public static boolean modItemExists(String formattedString) throws IOException {
+    private static boolean modItemExists(String formattedString) throws IOException {
         File file = new File("C:\\Users\\arell\\code\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
         List<String> lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
 

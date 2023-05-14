@@ -7,10 +7,6 @@ public enum ArmorMaterials {
     IRON("iron"),
     GOLD("gold"),
     DIAMOND("diamond"),
-    TURTLE("turtle"),
-    NETHERITE("netherite"),
-    PURE_GOLD("pure_gold"),
-    REINFORCED_DIAMOND("reinforced_diamond"),
     HOLY_EMERALD("holy_emerald")
     ;
 
