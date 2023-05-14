@@ -13,7 +13,7 @@ public class ModFormatter {
      */
 
     public static String generateModItemString(ArmorMaterials material, EquipmentSlot slot) {
-        String formattedString = "\tpublic static final RegistryObject<Item> " + material.getName().toUpperCase() + "_" + slot.getElement().toUpperCase() + " = ITEMS.register(\"" + material.getName().toLowerCase() + "_" + slot.toString().toLowerCase() + "\",\n"
+        String formattedString = "\tpublic static final RegistryObject<Item> " + material.getName().toUpperCase() + "_" + slot.getElement().toUpperCase() + " = ITEMS.register(\"" + material.getName().toLowerCase() + "_" + slot.getElement().toLowerCase() + "\",\n"
                 + "\t\t() -> new ArmorItem(ModArmorMaterials." + material.toString().toUpperCase() + ", EquipmentSlot." + slot + ",\n"
                 + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
         return formattedString;
