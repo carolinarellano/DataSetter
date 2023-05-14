@@ -28,7 +28,7 @@ public class Main_Window extends JFrame {
         setVisible(true);
     }
     private void initComponents() {
-        titleIcon = new ImageIcon(getClass().getResource("images/fondo.png"));
+        titleIcon = new ImageIcon(getClass().getResource("src/main/java/rcy/images/fondo.png"));
         titleImage = new JLabel(titleIcon);
         titleImage.setBounds(0,0,800,600);
         System.out.println(titleIcon.getIconWidth());
