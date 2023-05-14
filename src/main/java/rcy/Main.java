@@ -9,8 +9,7 @@ import static rcy.minecraft.ArmorMaterials.*;
 
 public class Main {
     public static void main(String[] args) throws IOException, ParseException {
-        Armor.registerJava(CHAIN);
-        Armor.registerJava(IRON);
-        Armor.registerJava(GOLD);
+        Armor.registerJson(GOLD1);
+        Armor.registerJava(GOLD1);
     }
 }
