@@ -5,16 +5,16 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.net.URL;
 
 public class Main_Window extends JFrame {
 
     public static final Color  WINDOW_COLOR = new Color(28, 28, 28);
     public static final Font   BUTTON_FONT  = new Font("CHEWY", Font.BOLD, 15);
-    private ImageIcon titleIcon;
     private JLabel titleImage;
-    private JButton weaponBtn = new JButton("Crear arma");
-    private JButton armorBtn = new JButton("Crear armadura");
-    private JButton testingBtn = new JButton("Testing");
+    private final JButton weaponBtn = new JButton("Crear arma");
+    private final JButton armorBtn = new JButton("Crear armadura");
+    private final JButton testingBtn = new JButton("Testing");
 
 
     public Main_Window() {
@@ -28,7 +28,9 @@ public class Main_Window extends JFrame {
         setVisible(true);
     }
     private void initComponents() {
-        titleIcon = new ImageIcon(getClass().getResource("src/main/java/rcy/images/fondo.png"));
+        URL location = getClass().getResource("/images/fondo.png");
+        assert location != null;
+        ImageIcon titleIcon = new ImageIcon(location, location.toExternalForm());
         titleImage = new JLabel(titleIcon);
         titleImage.setBounds(0,0,800,600);
         System.out.println(titleIcon.getIconWidth());

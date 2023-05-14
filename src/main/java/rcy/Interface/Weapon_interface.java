@@ -53,7 +53,7 @@ public class Weapon_interface extends JFrame {
         });
         backButton.setBounds(10,10,50,50);
 
-        BackgroundIcon = new ImageIcon(getClass().getResource("images/fondo_Arma.png"));
+        BackgroundIcon = new ImageIcon(getClass().getResource("/images/fondo_Arma.png"));
         BackgroundImage = new JLabel(BackgroundIcon);
         BackgroundImage.setBounds(0,0,800,600);
         //System.out.println(BackgroundIcon.getIconWidth());

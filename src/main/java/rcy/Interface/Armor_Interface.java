@@ -6,6 +6,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.URL;
 
 public class Armor_Interface extends JFrame {
     public static final Color WINDOW_COLOR = new Color(28, 28, 28);
@@ -54,7 +55,8 @@ public class Armor_Interface extends JFrame {
         });
         backButton.setBounds(10,10,50,50);
 
-        BackgroundIcon = new ImageIcon(getClass().getResource("images/fondo_Armadura.png"));
+        URL location = getClass().getResource("/images/fondo_Armadura.png");
+        BackgroundIcon = new ImageIcon(location);
         BackgroundImage = new JLabel(BackgroundIcon);
         BackgroundImage.setBounds(0, 0, 800, 600);
 
