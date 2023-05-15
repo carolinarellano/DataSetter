@@ -1,0 +1,59 @@
+Index: src/main/java/rcy/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rcy;\r\n\r\nimport rcy.minecraft.Armor;\r\nimport rcy.minecraft.ArmorMaterials;\r\nimport rcy.minecraft.Weapon;\r\nimport rcy.minecraft.WeaponMaterials;\r\n\r\nimport java.io.IOException;\r\nimport java.text.ParseException;\r\n\r\nimport static rcy.minecraft.Tool.*;\r\n\r\n\r\npublic class Main {\r\n    public static void main(String[] args) throws IOException, ParseException {\r\n\r\n        Armor.registerJava(ArmorMaterials.LEATHER);\r\n        Armor.registerJson(ArmorMaterials.DIAMOND);\r\n        Weapon.registerJava(WeaponMaterials.CITRINE, SWORD, 6, 3.2f);\r\n        Weapon.registerJava(WeaponMaterials.IRON, PICKAXE, 3, 2f);\r\n        Weapon.registerJava(WeaponMaterials.DIAMOND, AXE, 8, 7f);\r\n        Weapon.registerJava(WeaponMaterials.STONE, SHOVEL, 2, 1.3f);\r\n        Weapon.registerJava(WeaponMaterials.NETHERITE, HOE, 1, 0.3f);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/rcy/Main.java b/src/main/java/rcy/Main.java
+--- a/src/main/java/rcy/Main.java	
++++ b/src/main/java/rcy/Main.java	
+@@ -13,13 +13,11 @@
+ 
+ public class Main {
+     public static void main(String[] args) throws IOException, ParseException {
+-
+         Armor.registerJava(ArmorMaterials.LEATHER);
+         Armor.registerJson(ArmorMaterials.DIAMOND);
+         Weapon.registerJava(WeaponMaterials.CITRINE, SWORD, 6, 3.2f);
+         Weapon.registerJava(WeaponMaterials.IRON, PICKAXE, 3, 2f);
+         Weapon.registerJava(WeaponMaterials.DIAMOND, AXE, 8, 7f);
+         Weapon.registerJava(WeaponMaterials.STONE, SHOVEL, 2, 1.3f);
+-        Weapon.registerJava(WeaponMaterials.NETHERITE, HOE, 1, 0.3f);
+     }
+ }
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"MavenProjectsManager\">\r\n    <option name=\"originalFiles\">\r\n      <list>\r\n        <option value=\"$PROJECT_DIR$/pom.xml\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_19\" default=\"true\" project-jdk-name=\"19\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/out\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,6 +1,5 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="ExternalStorageConfigurationManager" enabled="true" />
+   <component name="MavenProjectsManager">
+     <option name="originalFiles">
+       <list>
+Index: src/main/java/rcy/minecraft/WeaponMaterials.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package rcy.minecraft;\r\n\r\n/**\r\n *\r\n * WeaponMaterials enum is where all the key materials are available, if the user types one inexistent material, it will throw an exception\r\n *\r\n */\r\npublic enum WeaponMaterials {\r\n\r\n    CITRINE(\"citrine\"),\r\n    WOOD(\"wood\"),\r\n    STONE(\"stone\"),\r\n    IRON(\"iron\"),\r\n    GOLD(\"gold\"),\r\n    DIAMOND(\"diamond\"),\r\n    NETHERITE(\"netherite\"),\r\n    PURE_GOLD(\"pure_gold\"),\r\n    REINFORCED_DIAMOND(\"reinforced_diamond\"),\r\n    HOLY_EMERALD(\"holy_emerald\");\r\n\r\n    private String name;\r\n\r\n    WeaponMaterials(String material){this.name = material;}\r\n\r\n    public String getName(){return name;}\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/rcy/minecraft/WeaponMaterials.java b/src/main/java/rcy/minecraft/WeaponMaterials.java
+--- a/src/main/java/rcy/minecraft/WeaponMaterials.java	
++++ b/src/main/java/rcy/minecraft/WeaponMaterials.java	
+@@ -13,9 +13,7 @@
+     IRON("iron"),
+     GOLD("gold"),
+     DIAMOND("diamond"),
+-    NETHERITE("netherite"),
+     PURE_GOLD("pure_gold"),
+-    REINFORCED_DIAMOND("reinforced_diamond"),
+     HOLY_EMERALD("holy_emerald");
+ 
+     private String name;
