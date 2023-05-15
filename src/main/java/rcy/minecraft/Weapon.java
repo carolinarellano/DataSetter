@@ -74,7 +74,7 @@ public class Weapon {
      */
 
     public static boolean modItemExists(String formattedString) throws IOException{
-        File file = new File("C:\\Users\\rodri\\code-projects\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
+        File file = new File("C:\\Users\\arell\\code\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
         List<String> lines = Files.readAllLines(file.toPath(), StandardCharsets.UTF_8);
 
         for (String line : lines) {
@@ -87,7 +87,11 @@ public class Weapon {
 
 
     //Getters y setters
-    public WeaponMaterials getName(){return name;}
+    public WeaponMaterials getName(){
+        return name;
+    }
 
-    public void setMaterial(WeaponMaterials material){this.name = material;}
+    public void setMaterial(WeaponMaterials material){
+        this.name = material;
+    }
 }
