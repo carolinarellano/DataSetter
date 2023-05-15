@@ -65,6 +65,22 @@ public class Armor_interface extends JFrame {
         LevelCmb.setFont(FONT);
         LevelCmb.setBackground(Color.decode("#1C1C1C"));
 
+        MaterialGbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                material = (BasicArmorMaterials) MaterialCmb.getSelectedItem();
+                JOptionPane.showMessageDialog(null, "Material seleccionado: " + material);
+            }
+        });
+        LevelGbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                level = (Levels) LevelCmb.getSelectedItem();
+                // Aquí puedes realizar cualquier acción adicional con el material seleccionado
+
+                JOptionPane.showMessageDialog(null, "Nivel seleccionado: " + level);
+            }
+        });
         MaterialGbtn.setBounds(175,230,100,27);
         MaterialGbtn.setFont(FONT);
         LevelGbtn.setBounds(525,230,100,27);
@@ -72,7 +88,6 @@ public class Armor_interface extends JFrame {
         okbtn.setBounds(330,297,150,27);
         okbtn.setFont(FONT);
         okbtn.setBackground(Color.decode("#1C1C1C"));
-
         okbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

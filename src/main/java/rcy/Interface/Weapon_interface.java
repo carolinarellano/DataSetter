@@ -4,6 +4,7 @@ import com.formdev.flatlaf.FlatLightLaf;
 import javax.swing.*;
 import java.awt.*;
 
+import rcy.minecraft.BasicArmorMaterials;
 import rcy.minecraft.Tool;
 import rcy.minecraft.Weapon;
 import rcy.minecraft.WeaponMaterials;
@@ -27,7 +28,7 @@ public class Weapon_interface extends JFrame {
     WeaponMaterials material = (WeaponMaterials) materialCmb.getSelectedItem();
     Tool tool = (Tool) weaponCmb.getSelectedItem();
     int damage = (int) damageSpr.getValue();
-    float speed = (float) SpeedSpr.getValue();
+    int speed = (int) SpeedSpr.getValue();
     private JButton okbtn = new JButton("Guardar todo");
     private JButton MaterialGbtn = new JButton("Guardar");
     private JButton WeaponGbtn = new JButton("Guardar");
@@ -76,7 +77,40 @@ public class Weapon_interface extends JFrame {
         //Lista despegable velocidad
         SpeedSpr.setBounds(589,180,136,27);
         SpeedSpr.setFont(FONT);
+        MaterialGbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                material = (WeaponMaterials) materialCmb.getSelectedItem();
+                // Aquí puedes realizar cualquier acción adicional con el material seleccionado
 
+                JOptionPane.showMessageDialog(null, "Material seleccionado: " + material);
+            }
+        });
+        WeaponGbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                tool = (Tool) weaponCmb.getSelectedItem();
+                JOptionPane.showMessageDialog(null, "Material seleccionado: " + tool);
+            }
+        });
+        damageGbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                damage = (int) damageSpr.getValue();
+                // Aquí puedes realizar cualquier acción adicional con el material seleccionado
+
+                JOptionPane.showMessageDialog(null, "Material seleccionado: " + damage);
+            }
+        });
+        speedGbtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                speed = (int) SpeedSpr.getValue();
+                // Aquí puedes realizar cualquier acción adicional con el material seleccionado
+
+                JOptionPane.showMessageDialog(null, "Material seleccionado: " + speed);
+            }
+        });
         MaterialGbtn.setBounds(92,210,100,27);
         MaterialGbtn.setFont(FONT);
         WeaponGbtn.setBounds(262,210,100,27);
@@ -104,7 +138,10 @@ public class Weapon_interface extends JFrame {
                 dispose();
             }
         });
-
+        c.add(MaterialGbtn);
+        c.add(WeaponGbtn);
+        c.add(damageGbtn);
+        c.add(speedGbtn);
         c.add(okbtn);
         c.add(materialCmb);
         c.add(weaponCmb);
