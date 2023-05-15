@@ -25,10 +25,6 @@ public class Weapon_interface extends JFrame {
     private JSpinner damageSpr = new JSpinner(damagelimit);
     SpinnerNumberModel speedlimit = new SpinnerNumberModel(1.0, 1.0, 10.0, 0.1);
     private JSpinner SpeedSpr = new JSpinner(speedlimit);
-    WeaponMaterials material = (WeaponMaterials) materialCmb.getSelectedItem();
-    Tool tool = (Tool) weaponCmb.getSelectedItem();
-    int damage = (int) damageSpr.getValue();
-    int speed = (int) SpeedSpr.getValue();
     private JButton okbtn = new JButton("Guardar todo");
     private JButton MaterialGbtn = new JButton("Guardar");
     private JButton WeaponGbtn = new JButton("Guardar");
@@ -80,35 +76,38 @@ public class Weapon_interface extends JFrame {
         MaterialGbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                material = (WeaponMaterials) materialCmb.getSelectedItem();
+                WeaponMaterials material = (WeaponMaterials) materialCmb.getSelectedItem();
                 // Aquí puedes realizar cualquier acción adicional con el material seleccionado
 
                 JOptionPane.showMessageDialog(null, "Material seleccionado: " + material);
             }
         });
+
         WeaponGbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                tool = (Tool) weaponCmb.getSelectedItem();
-                JOptionPane.showMessageDialog(null, "Material seleccionado: " + tool);
+                Tool tool = (Tool) weaponCmb.getSelectedItem();
+                JOptionPane.showMessageDialog(null, "Arma seleccionada: " + tool);
             }
         });
+
         damageGbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                damage = (int) damageSpr.getValue();
-                // Aquí puedes realizar cualquier acción adicional con el material seleccionado
+                int damage = (int) damageSpr.getValue();
+                // Aquí puedes realizar cualquier acción adicional con el daño seleccionado
 
-                JOptionPane.showMessageDialog(null, "Material seleccionado: " + damage);
+                JOptionPane.showMessageDialog(null, "Daño seleccionado: " + damage);
             }
         });
+
         speedGbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                speed = (int) SpeedSpr.getValue();
-                // Aquí puedes realizar cualquier acción adicional con el material seleccionado
+                double speed = (double) SpeedSpr.getValue();
+                // Aquí puedes realizar cualquier acción adicional con la velocidad seleccionada
 
-                JOptionPane.showMessageDialog(null, "Material seleccionado: " + speed);
+                JOptionPane.showMessageDialog(null, "Velocidad seleccionada: " + speed);
             }
         });
         MaterialGbtn.setBounds(92,210,100,27);
@@ -122,17 +121,23 @@ public class Weapon_interface extends JFrame {
         okbtn.setBounds(330,297,150,27);
         okbtn.setFont(FONT);
 
-        damageSpr.setValue(-1);
-        SpeedSpr.setValue(-1);
+        /*damageSpr.setValue(-1);
+        SpeedSpr.setValue(-1);*/
 
         okbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                WeaponMaterials material = (WeaponMaterials) materialCmb.getSelectedItem();
+                Tool tool = (Tool) weaponCmb.getSelectedItem();
+                int damage = (int) damageSpr.getValue();
+                double speed = (double) SpeedSpr.getValue();
+
                 try {
-                    Weapon.registerJava(material, tool, damage, speed);
+                    Weapon.registerJava(material, tool, damage, (float) speed);
                 } catch (IOException ex) {
                     throw new RuntimeException(ex);
                 }
+
                 Main_Window mainInterface = new Main_Window();
                 mainInterface.setVisible(true);
                 dispose();
