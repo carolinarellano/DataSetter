@@ -85,7 +85,7 @@ public class ModFormatter {
     }
 
     public static void insertModItemString(String formattedString) throws IOException {
-        File file = new File("C:\\Users\\rodri\\code-projects\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
+        File file = new File("C:\\Users\\arell\\code\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
         BufferedReader reader = new BufferedReader(new FileReader(file));
 
         String line;
