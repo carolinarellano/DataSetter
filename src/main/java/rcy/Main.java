@@ -19,6 +19,6 @@ public class Main {
     public static void main(String[] args) throws IOException, ParseException {
         Armor.registerJson(GOLD1);
         Armor.registerJava(GOLD1);
-        
+
     }
 }
