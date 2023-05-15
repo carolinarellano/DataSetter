@@ -33,7 +33,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Yochi/CODE/Minecraft",
+    "last_opened_file_path": "C:/Users/Yochi/CODE/DataSetter",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -82,6 +82,7 @@
       <updated>1684089119597</updated>
       <workItem from="1684089120973" duration="1688000" />
       <workItem from="1684101760109" duration="2719000" />
+      <workItem from="1684112350472" duration="548000" />
     </task>
     <servers />
   </component>
