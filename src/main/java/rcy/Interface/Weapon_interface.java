@@ -10,6 +10,7 @@ import rcy.minecraft.WeaponMaterials;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 public class Weapon_interface extends JFrame {
     public static final Color  WINDOW_COLOR = new Color(28, 28, 28);
@@ -18,12 +19,16 @@ public class Weapon_interface extends JFrame {
     private JLabel BackgroundImage;
     public static final Font FONT = new Font("CHEWY", Font.CENTER_BASELINE, 15);
     private JComboBox<WeaponMaterials> materialCmb = new JComboBox(WeaponMaterials.values());
-    String selectedMaterial = (String) materialCmb.getSelectedItem();
     private JComboBox<Tool> weaponCmb = new JComboBox(Tool.values());
     SpinnerNumberModel damagelimit = new SpinnerNumberModel(1, 1, 10, 1);
     private JSpinner damageSpr = new JSpinner(damagelimit);
     SpinnerNumberModel speedlimit = new SpinnerNumberModel(1.0, 1.0, 10.0, 0.1);
     private JSpinner SpeedSpr = new JSpinner(speedlimit);
+
+    WeaponMaterials material = (WeaponMaterials) materialCmb.getSelectedItem();
+    Tool tool = (Tool) weaponCmb.getSelectedItem();
+    int damage = (int) damageSpr.getValue();
+    float speed = (float) SpeedSpr.getValue();
 
     private JButton okbtn = new JButton("Guardar");
 
@@ -52,7 +57,7 @@ public class Weapon_interface extends JFrame {
         });
         backButton.setBounds(10,10,40,20);
 
-        BackgroundIcon = new ImageIcon("C:/Users/Yochi/CODE/DataSetter/src/main/java/rcy/images/fondo_Arma.png");
+        BackgroundIcon = new ImageIcon("C:/Users/arell/code/DataSetter/src/main/java/rcy/images/fondo_Arma.png");
         BackgroundImage = new JLabel(BackgroundIcon);
         BackgroundImage.setBounds(0,0,800,400);
         //System.out.println(BackgroundIcon.getIconWidth());
@@ -72,11 +77,20 @@ public class Weapon_interface extends JFrame {
 
         okbtn.setBounds(350,297,100,27);
         okbtn.setFont(FONT);
+
+        damageSpr.setValue(-1);
+        SpeedSpr.setValue(-1);
+
         okbtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                Weapon weapon = new Weapon();
-                weapon.registerJava(materialCmb,weaponCmb,damageSpr,SpeedSpr);
+                try {
+                    Weapon.registerJava(material, tool, damage, speed);
+                } catch (IOException ex) {
+                    throw new RuntimeException(ex);
+                }
+                Main_Window mainInterface = new Main_Window();
+                mainInterface.setVisible(true);
                 dispose();
             }
         });

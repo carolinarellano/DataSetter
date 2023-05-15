@@ -14,7 +14,6 @@ public class Main_Window extends JFrame {
     private JLabel titleImage;
     private JButton weaponBtn = new JButton("Crear arma");
     private JButton armorBtn = new JButton("Crear armadura");
-    private JButton testingBtn = new JButton("Testing");
 
 
     public Main_Window() {
@@ -28,7 +27,7 @@ public class Main_Window extends JFrame {
         setVisible(true);
     }
     private void initComponents() {
-        titleIcon = new ImageIcon("C:/Users/Yochi/CODE/DataSetter/src/main/java/rcy/images/fondo.png");
+        titleIcon = new ImageIcon("C:/Users/arell/code/DataSetter/src/main/java/rcy/images/fondo.png");
         titleImage = new JLabel(titleIcon);
         titleImage.setBounds(0,0,800,600);
         System.out.println(titleIcon.getIconWidth());
@@ -41,19 +40,7 @@ public class Main_Window extends JFrame {
         weaponBtn.setFont(BUTTON_FONT);
         armorBtn.setBounds(540,238,155,43);
         armorBtn.setFont(BUTTON_FONT);
-        testingBtn.setBounds(550,480,139,43);
-        testingBtn.setFont(BUTTON_FONT);
 
-        //Abrir minecraft
-        testingBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                try {
-                    Runtime.getRuntime().exec("Terminal");
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-            }
-        });
         armorBtn.addActionListener(e -> {
             Armor_interface armorInterface = new Armor_interface();
             armorInterface.setVisible(true);
@@ -66,7 +53,6 @@ public class Main_Window extends JFrame {
         });
         c.add(weaponBtn);
         c.add(armorBtn);
-        c.add(testingBtn);
         c.add(titleImage);
     }
     public static void main(String[] args) throws Exception {
