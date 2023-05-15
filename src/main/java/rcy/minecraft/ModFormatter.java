@@ -7,8 +7,9 @@ public class ModFormatter {
     /**
      * Gets the new ArmorItem created and creates a string that will be written into ModItems
      *
-     * @param material the material taken from ArmorMaterial enum
+     * @param material the material taken from ArmorMaterials enum
      * @param slot then type of the armor slot FEET, HAND, CHEST, ...
+     *
      *
      */
 
@@ -16,6 +17,43 @@ public class ModFormatter {
         String formattedString = "\tpublic static final RegistryObject<Item> " + material.getName().toUpperCase() + "_" + slot.getElement().toUpperCase() + " = ITEMS.register(\"" + material.getReference() + "_" + slot.getItem() + "\",\n"
                 + "\t\t() -> new ArmorItem(ModArmorMaterials." + material.toString().toUpperCase() + ", EquipmentSlot." + slot + ",\n"
                 + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
+        return formattedString;
+    }
+
+    /**
+     * Gets the new Weapon (SwordItem, PickaxeItem, AxeItem, ShovelItem, HoeItem) and creates a string that will be written into ModItems
+     *
+     * @param material taken from WeaponMaterials enum
+     * @param tool type of weapon (Sword, Pickaxe, Axe, Shovel or Hoe)
+     *
+     */
+
+    public static String generateModItemString(WeaponMaterials material, Tool tool, int atk, float spAtk) {
+        String formattedString = "\tpublic static final RegistryObject<Item> " + material.getName().toUpperCase() + "_" + tool.getElement().toUpperCase() + " = ITEMS.register(\"" + material.getName().toLowerCase() + "_" + tool.toString().toLowerCase() + "\",\n";
+        switch (tool)
+        {
+            case SWORD:
+                formattedString += "\t\t() -> new SwordItem(WeaponMaterials." + material.toString().toUpperCase() + ", " + atk + ", " + spAtk + "f , \n"
+                    + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
+                    break;
+            case PICKAXE:
+                formattedString += "\t\t() -> new PickaxeItem(WeaponMaterials." + material.toString().toUpperCase() + ", " + atk + ", " + spAtk + "f , \n"
+                        + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
+                    break;
+            case AXE:
+                formattedString += "\t\t() -> new AxeItem(WeaponMaterials." + material.toString().toUpperCase() + ", " + atk + ", " + spAtk + "f , \n"
+                        + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
+                    break;
+            case SHOVEL:
+                formattedString += "\t\t() -> new ShovelItem(WeaponMaterials." + material.toString().toUpperCase() + ", " + atk + ", " + spAtk + "f , \n"
+                        + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
+                    break;
+            case HOE:
+                formattedString += "\t\t() -> new HoeItem(WeaponMaterials." + material.toString().toUpperCase() + ", " + atk + ", " + spAtk + "f , \n"
+                        + "\t\t\t\tnew Item.Properties().tab(ModCreativeModeTab.MODBUILDER_TAB)));\n";
+                    break;
+        }
+
         return formattedString;
     }
 
@@ -29,8 +67,25 @@ public class ModFormatter {
                 "  \"item.modbuilder." + str + "_boots\": \"" + cap + " Boots\"";
     }
 
+    /**
+     * Creates every weapon format for the assets of a new material
+     *
+     * @param material taken from WeaponMaterials
+     *
+     */
+    public static String LangFormat(WeaponMaterials material){
+        String str = material.name().toLowerCase();
+        String cap = str.substring(0, 1).toUpperCase() + str.substring(1).toLowerCase();
+        return  "\"item.modbuilder." + str + "\": \"" + cap + "\", \n" +
+                "\"item.modbuilder." + str + "_sword\": \"" + cap + " Sword\",\n" +
+                "\"item.modbuilder." + str + "_pickaxe\": \"" + cap + " Pickaxe\",\n" +
+                "\"item.modbuilder." + str + "_axe\": \"" + cap + " Axe\",\n" +
+                "\"item.modbuilder." + str + "_shovel\": \"" + cap + " Shovel\",\n" +
+                "\"item.modbuilder." + str + "_hoe\": \"" + cap + " Hoe\",\n";
+    }
+
     public static void insertModItemString(String formattedString) throws IOException {
-        File file = new File("C:\\Users\\arell\\code\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
+        File file = new File("C:\\Users\\rodri\\code-projects\\Minecraft\\src\\main\\java\\net\\rcy\\modbuilder\\item\\ModItems.java");
         BufferedReader reader = new BufferedReader(new FileReader(file));
 
         String line;
