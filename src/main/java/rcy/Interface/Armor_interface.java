@@ -23,7 +23,9 @@ public class Armor_interface extends JFrame {
     public JComboBox<Levels> LevelCmb = new JComboBox(Levels.values());
     public BasicArmorMaterials material = (BasicArmorMaterials) MaterialCmb.getSelectedItem();
     public Levels level = (Levels) LevelCmb.getSelectedItem();
-    private final JButton okbtn = new JButton("Guardar");
+    private JButton okbtn = new JButton("Guardar todo");
+    private JButton MaterialGbtn = new JButton("Guardar");
+    private JButton LevelGbtn = new JButton("Guardar");
 
 
     public Armor_interface(){
@@ -63,7 +65,11 @@ public class Armor_interface extends JFrame {
         LevelCmb.setFont(FONT);
         LevelCmb.setBackground(Color.decode("#1C1C1C"));
 
-        okbtn.setBounds(350,297,100,27);
+        MaterialGbtn.setBounds(175,230,100,27);
+        MaterialGbtn.setFont(FONT);
+        LevelGbtn.setBounds(525,230,100,27);
+        LevelGbtn.setFont(FONT);
+        okbtn.setBounds(330,297,150,27);
         okbtn.setFont(FONT);
         okbtn.setBackground(Color.decode("#1C1C1C"));
 
@@ -128,7 +134,8 @@ public class Armor_interface extends JFrame {
                 dispose();
             }
         });
-
+        c.add(MaterialGbtn);
+        c.add(LevelGbtn);
         c.add(okbtn);
         c.add(LevelCmb);
         c.add(MaterialCmb);

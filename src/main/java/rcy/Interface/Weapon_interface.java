@@ -24,13 +24,15 @@ public class Weapon_interface extends JFrame {
     private JSpinner damageSpr = new JSpinner(damagelimit);
     SpinnerNumberModel speedlimit = new SpinnerNumberModel(1.0, 1.0, 10.0, 0.1);
     private JSpinner SpeedSpr = new JSpinner(speedlimit);
-
     WeaponMaterials material = (WeaponMaterials) materialCmb.getSelectedItem();
     Tool tool = (Tool) weaponCmb.getSelectedItem();
     int damage = (int) damageSpr.getValue();
     float speed = (float) SpeedSpr.getValue();
-
-    private JButton okbtn = new JButton("Guardar");
+    private JButton okbtn = new JButton("Guardar todo");
+    private JButton MaterialGbtn = new JButton("Guardar");
+    private JButton WeaponGbtn = new JButton("Guardar");
+    private JButton damageGbtn = new JButton("Guardar");
+    private JButton speedGbtn = new JButton("Guardar");
 
     public Weapon_interface(){
         super("Crea tu arma");
@@ -75,7 +77,15 @@ public class Weapon_interface extends JFrame {
         SpeedSpr.setBounds(589,180,136,27);
         SpeedSpr.setFont(FONT);
 
-        okbtn.setBounds(350,297,100,27);
+        MaterialGbtn.setBounds(92,210,100,27);
+        MaterialGbtn.setFont(FONT);
+        WeaponGbtn.setBounds(262,210,100,27);
+        WeaponGbtn.setFont(FONT);
+        damageGbtn.setBounds(432,210,100,27);
+        damageGbtn.setFont(FONT);
+        speedGbtn.setBounds(602,210,100,27);
+        speedGbtn.setFont(FONT);
+        okbtn.setBounds(330,297,150,27);
         okbtn.setFont(FONT);
 
         damageSpr.setValue(-1);
