@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/DataSetter.iml" filepath="$PROJECT_DIR$/DataSetter.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/DataSetter.iml" filepath="$PROJECT_DIR$/.idea/DataSetter.iml" />
+>>>>>>> 27c6498bf505e341ec75941ebc7a6591833d8255
     </modules>
   </component>
 </project>

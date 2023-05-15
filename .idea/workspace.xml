@@ -4,21 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="fd7157d7-8d39-4a84-9fb5-b0787f82f35e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/rcy/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/rcy/Main.java" afterDir="false" />
     </list>
+=======
+    <list default="true" id="a05d16f8-43cd-4092-a68a-6847863e8ac1" name="Changes" comment="" />
+>>>>>>> 27c6498bf505e341ec75941ebc7a6591833d8255
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+<<<<<<< HEAD
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="interface" />
       </map>
     </option>
+=======
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+>>>>>>> 27c6498bf505e341ec75941ebc7a6591833d8255
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,18 +38,26 @@
       </MavenGeneralSettings>
     </option>
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="2PoD2Dsixj6rV06pefSfop3bEpx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
+=======
+  <component name="ProjectId" id="2PnNvuWsUbis1GkVhb1JQ1e7ztY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+>>>>>>> 27c6498bf505e341ec75941ebc7a6591833d8255
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+<<<<<<< HEAD
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
@@ -58,6 +74,57 @@
       <updated>1684114331622</updated>
       <workItem from="1684114332846" duration="71000" />
       <workItem from="1684114413883" duration="434000" />
+=======
+    "last_opened_file_path": "C:/Users/Yochi/CODE/Minecraft",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Yochi\CODE\DataSetter\src\main\java\rcy" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="rcy.Interface" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main_Window" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rcy.Interface.Main_Window" />
+      <module name="DataSetter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rcy.Interface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main_Window" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a05d16f8-43cd-4092-a68a-6847863e8ac1" name="Changes" comment="" />
+      <created>1684089119597</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684089119597</updated>
+      <workItem from="1684089120973" duration="1688000" />
+      <workItem from="1684101760109" duration="2719000" />
+>>>>>>> 27c6498bf505e341ec75941ebc7a6591833d8255
     </task>
     <servers />
   </component>
