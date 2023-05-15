@@ -1,4 +1,4 @@
-package rcy.minecraft;
+package main.java.rcy.minecraft;
 
 import java.io.File;
 import java.io.IOException;
@@ -7,7 +7,7 @@ import java.nio.file.Files;
 import java.text.ParseException;
 import java.util.List;
 
-import static rcy.minecraft.ModFormatter.*;
+import static main.java.rcy.minecraft.ModFormatter.*;
 
 public class Armor {
 

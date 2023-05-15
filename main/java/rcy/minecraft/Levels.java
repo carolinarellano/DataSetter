@@ -1,4 +1,4 @@
-package rcy.minecraft;
+package main.java.rcy.minecraft;
 
 public enum Levels {
     NIVEL1,
