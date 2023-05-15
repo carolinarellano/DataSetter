@@ -13,6 +13,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+/**
+ *
+ * Weapon_interface class is the graphic interface to assign values to the customized weapon
+ *
+ */
+
 public class Weapon_interface extends JFrame {
     public static final Color  WINDOW_COLOR = new Color(28, 28, 28);
     JButton backButton = new JButton("\u2190");

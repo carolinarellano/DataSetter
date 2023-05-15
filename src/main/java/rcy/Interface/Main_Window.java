@@ -6,6 +6,12 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ *
+ * Main_Window class is the calls the other graphic interfaces and it is a menu to go to the customization of armors and weapons
+ *
+ */
+
 public class Main_Window extends JFrame {
 
     public static final Color  WINDOW_COLOR = new Color(28, 28, 28);

@@ -13,6 +13,12 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.text.ParseException;
 
+/**
+ *
+ * Armor_interface class is the graphic interface to assign values to the customized armor
+ *
+ */
+
 public class Armor_interface extends JFrame {
     public static final Color WINDOW_COLOR = new Color(28, 28, 28);
     public static final Font FONT = new Font("CHEWY", Font.CENTER_BASELINE, 15);
