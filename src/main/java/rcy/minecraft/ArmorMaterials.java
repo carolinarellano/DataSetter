@@ -1,5 +1,11 @@
 package rcy.minecraft;
 
+/**
+ *
+ * ArmorMaterials enum is where all the key materials are available, it is used to set the methods arguments.
+ *
+ */
+
 public enum ArmorMaterials {
     CITRINE("citrine", "citrine"),
     CITRINE1("citrine1", "citrine"),
