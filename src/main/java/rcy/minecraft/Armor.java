@@ -9,6 +9,12 @@ import java.util.List;
 
 import static rcy.minecraft.ModFormatter.*;
 
+/**
+ *
+ * Armor class is where all the constructors, methods, setters and getters take place for the creation of any armor, by using the register based on the ModFormatter class
+ *
+ */
+
 public class Armor {
 
     private ArmorMaterials name;

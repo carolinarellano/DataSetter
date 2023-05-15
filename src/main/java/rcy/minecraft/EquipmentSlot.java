@@ -1,5 +1,11 @@
 package rcy.minecraft;
 
+/**
+ *
+ * EquipmentSlot enum has the different parts of the armor that can be created and they are used to set the format of the methods
+ *
+ */
+
 public enum EquipmentSlot {
     FEET("BOOTS", "boots"),
     LEGS("LEGGING", "leggings"),
